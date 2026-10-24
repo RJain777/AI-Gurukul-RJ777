@@ -1,0 +1,16 @@
+{
+  "name": "AI Gurukul RJ777 — AI Learning Atlas",
+  "short_name": "AI Gurukul",
+  "description": "AI Gurukul RJ777 · v7.0 — Learn, share, innovate — build together with AI. Developed by Ravindra Jain.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#08040F",
+  "theme_color": "#08040F",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
