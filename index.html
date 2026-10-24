@@ -159,8 +159,8 @@
 [data-theme="nordic"] .bgfx::before{background:radial-gradient(44rem 30rem at 76% -4%,rgba(85,102,245,.1),transparent 66%)}
 [data-theme="nordic"] .bgfx::after{background:none}
 
-/* ── 10 Accenture Light ── */
-[data-theme="acnlight"]{
+/* ── 10 Acc Light ── */
+[data-theme="acclight"]{
   color-scheme:light;
   --bg:#EEEEF2; --bg-2:#E4E4EA; --surface:#FFFFFF; --surface-2:#F7F7F9; --surface-3:#EDEDF1;
   --border:#DCDCDC; --border-strong:#A100FF; --border-w:1px;
@@ -171,17 +171,17 @@
   --r-sm:0px; --r-md:0px; --r-lg:0px; --r-xl:0px; --r-pill:999px;
   --sh-sm:0 1px 2px rgba(0,0,0,.06); --sh-md:0 6px 18px rgba(0,0,0,.08);
   --sh-lg:0 18px 44px rgba(0,0,0,.12); --sh-glow:0 0 0 2px #A100FF;
-  --f-display:'Graphik','Graphik Semibold',Arial,Helvetica,sans-serif;
-  --f-body:'Graphik',Arial,Helvetica,sans-serif;
+  --f-display:Arial,Helvetica,sans-serif;
+  --f-body:Arial,Helvetica,sans-serif;
   --f-mono:ui-monospace,'Consolas','DejaVu Sans Mono',monospace;
   --dsp-w:700; --dsp-ls:-.02em; --dsp-tt:none; --dsp-lh:1.05;
   --ease:cubic-bezier(.33,1,.68,1); --dur:.22s; --dur-slow:.4s; --lift:-2px; --press:.99;
   --line:#CFCFCF;
 }
-[data-theme="acnlight"] .bgfx::before,[data-theme="acnlight"] .bgfx::after{background:none}
+[data-theme="acclight"] .bgfx::before,[data-theme="acclight"] .bgfx::after{background:none}
 
-/* ── 11 Accenture Dark ── */
-[data-theme="acndark"]{
+/* ── 11 Acc Dark ── */
+[data-theme="accdark"]{
   color-scheme:dark;
   --bg:#000000; --bg-2:#0D0D0D; --surface:#1B1B1D; --surface-2:#252528; --surface-3:#303034;
   --border:#38383D; --border-strong:#A100FF; --border-w:1px;
@@ -192,15 +192,15 @@
   --r-sm:0px; --r-md:0px; --r-lg:0px; --r-xl:0px; --r-pill:999px;
   --sh-sm:0 1px 2px rgba(0,0,0,.5); --sh-md:0 8px 22px rgba(0,0,0,.6);
   --sh-lg:0 20px 48px rgba(0,0,0,.7); --sh-glow:0 0 0 2px #A100FF;
-  --f-display:'Graphik','Graphik Semibold',Arial,Helvetica,sans-serif;
-  --f-body:'Graphik',Arial,Helvetica,sans-serif;
+  --f-display:Arial,Helvetica,sans-serif;
+  --f-body:Arial,Helvetica,sans-serif;
   --f-mono:ui-monospace,'Consolas','DejaVu Sans Mono',monospace;
   --dsp-w:700; --dsp-ls:-.02em; --dsp-tt:none; --dsp-lh:1.05;
   --ease:cubic-bezier(.33,1,.68,1); --dur:.22s; --dur-slow:.4s; --lift:-2px; --press:.99;
   --line:#3A3A3A;
 }
-[data-theme="acndark"] .bgfx::before{background:radial-gradient(50rem 32rem at 84% -8%,rgba(161,0,255,.16),transparent 62%)}
-[data-theme="acndark"] .bgfx::after{background:none}
+[data-theme="accdark"] .bgfx::before{background:radial-gradient(50rem 32rem at 84% -8%,rgba(161,0,255,.16),transparent 62%)}
+[data-theme="accdark"] .bgfx::after{background:none}
 
 /* ── 04 Aurora Glass ── */
 [data-theme="aurora"]{
@@ -844,12 +844,12 @@ button,.chip,.layer,.citem,.mrow,.opt{-webkit-tap-highlight-color:transparent;to
 /* ═════════ Colour coding — one hue per section, layer and guide group ═════════
    Two tunings of the same 12 hues: bright for dark themes, deep for light themes,
    so every hue stays readable as text on that theme's panels. */
-[data-theme="neonnight"],[data-theme="obsidian"],[data-theme="acndark"],[data-theme="terminal"],[data-theme="peacock"]{
+[data-theme="neonnight"],[data-theme="obsidian"],[data-theme="accdark"],[data-theme="terminal"],[data-theme="peacock"]{
   --k1:#60A5FA; --k2:#A78BFA; --k3:#2DD4BF; --k4:#FBBF24; --k5:#F472B6; --k6:#4ADE80;
   --k7:#22D3EE; --k8:#FB923C; --k9:#93A5FF; --k10:#F87171; --k11:#E9C46A; --k12:#A3E635;
   --tint:14%; --wash:9%;
 }
-[data-theme="neonday"],[data-theme="auto"],[data-theme="nordic"],[data-theme="acnlight"],[data-theme="holi"],[data-theme="aurora"],[data-theme="brutal"],[data-theme="clay"]{
+[data-theme="neonday"],[data-theme="auto"],[data-theme="nordic"],[data-theme="acclight"],[data-theme="holi"],[data-theme="aurora"],[data-theme="brutal"],[data-theme="clay"]{
   --k1:#1D4ED8; --k2:#6D28D9; --k3:#0F766E; --k4:#B45309; --k5:#BE185D; --k6:#15803D;
   --k7:#0E7490; --k8:#C2410C; --k9:#4338CA; --k10:#B91C1C; --k11:#946200; --k12:#4D7C0F;
   --tint:10%; --wash:6%;
@@ -1401,7 +1401,7 @@ footer .credit{margin:0 0 6px;font-weight:600;color:var(--text-2)}
  <div class="vhead"><div><h2>Certification path</h2><p>Anthropic's Claude Certification Program runs from a foundations credential to a professional architect credential. Each card shows your readiness on the terms this atlas maps to it.</p></div></div>
  <div class="ladder" id="ladder"></div>
  <div class="grid3 sect" style="margin-top:28px">
-  <div class="panel note"><b>Who can sit the exams</b><p>Exams are proctored, identity-verified and delivered through Pearson, with digital badges via Credly. They are available to members of the Claude Partner Network; Accenture is a member and has publicly committed to certifying 50,000 professionals — so ask your practice or learning team for the internal route and any voucher.</p></div>
+  <div class="panel note"><b>Who can sit the exams</b><p>Exams are proctored, identity-verified and delivered through Pearson, with digital badges via Credly. They are available to members of the Claude Partner Network — if your organisation is a member, ask your learning team about the route and any exam voucher.</p></div>
   <div class="panel note"><b>Where to prepare</b><p>Preparation courses for each credential sit in Anthropic Partner Academy. Free public courses on Claude Academy (academy.claude.com) — AI Fluency, Claude 101, Building with the Claude API, Introduction to MCP, Claude Code in Action — cover the same ground.</p></div>
   <div class="panel note"><b>How to use this page</b><p>Start at Fundamentals even if you're technical: it builds shared vocabulary. Then take Architect: Foundations, since your work is designing systems rather than only coding them. Details change often; check the official exam guide before booking.</p></div>
  </div>
@@ -1899,7 +1899,7 @@ T.push(
  r:["structured"]},
 {id:"structured",t:"Structured Output / JSON Schema",d:"prm",lv:1,
  s:"Getting output in a machine-readable, validated format such as JSON that matches a schema.",
- x:"{\"priority\":\"P2\",\"tower\":\"NOC\",\"summary\":\"…\"} that a script loads straight into Excel.",
+ x:"{\"priority\":\"P2\",\"team\":\"NOC\",\"summary\":\"…\"} that a script loads straight into Excel.",
  dd:"Approaches: clear format instructions with an example; tool definitions with JSON input schemas; API-level structured-output features that constrain generation to a schema; and always validating on your side with a retry on failure. Essential whenever an LLM feeds a downstream system.",
  say:"If a machine reads the output, we enforce a schema and validate it.",
  r:["tooluse","temp","eval","prefill"]},
@@ -1942,7 +1942,7 @@ T.push(
 {id:"vectordb",t:"Vector Database",d:"ret",lv:1,f:"rag",
  s:"A database optimised to store embeddings and quickly find the ones nearest to a query vector.",
  x:"Pinecone, Weaviate, Milvus, Qdrant, pgvector in Postgres, Azure AI Search, OpenSearch.",
- dd:"Uses approximate nearest-neighbour indexes such as HNSW to search millions of vectors in milliseconds. Store metadata with each vector — source, date, tower, permission group — and filter on it; that's how you stop one team's bot returning another team's restricted documents.",
+ dd:"Uses approximate nearest-neighbour indexes such as HNSW to search millions of vectors in milliseconds. Store metadata with each vector — source, date, team, permission group — and filter on it; that's how you stop one team's bot returning another team's restricted documents.",
  r:["embedding","semantic","rag"]},
 {id:"semantic",t:"Semantic Search",d:"ret",lv:1,
  s:"Search by meaning using embeddings, so ‘laptop won't connect to VPN’ matches ‘remote access failure’.",
@@ -2407,7 +2407,7 @@ const ROAD = [
  ["r1b","Walk all seven flows in the Flows tab and narrate each one aloud once."],
  ["r1c","Complete the free AI Fluency and Claude 101 courses on Claude Academy."],
  ["r1d","Score 80%+ twice in a row on the Definition quiz."],
- ["r1e","Run a 15-minute ‘AI words that matter’ session for one tower team."],
+ ["r1e","Run a 15-minute ‘AI words that matter’ session for one team."],
  ["r1f","Read the three ‘Understand’ guides in the Build lab and finish Project 1 (ticket summariser)."],
  ["r1g","Read ‘AI roles — who does what’ and write down your primary and secondary target role."]]},
 {ph:"Months 2–3",n:"Hands-on builder",goal:"Turn terms into things you've personally built and measured.",tasks:[
@@ -2415,16 +2415,16 @@ const ROAD = [
  ["r2b","Write an eval set for your Copilot Master Prompt and track scores per version."],
  ["r2c","Build Project 3: a read-only MCP server over a public API, tested in the MCP Inspector."],
  ["r2d","Complete Building with the Claude API and Introduction to MCP courses."],
- ["r2e","Sit Claude Certified Associate: Foundations via the Accenture partner route."]]},
+ ["r2e","Sit Claude Certified Associate: Foundations — through your organisation's partner route if it has one."]]},
 {ph:"Months 4–6",n:"Agent architect",goal:"Design agents with harness, hooks, human approval and evals — and defend the design.",tasks:[
  ["r3a","Build Project 4: an alert-triage agent in LangGraph with tools, human approval and evals."],
  ["r3b","Use Claude Code with CLAUDE.md, a custom skill, a hook and a sub-agent on a real script."],
  ["r3c","Score 85%+ on Scenario quizzes across all five architect domains."],
  ["r3d","Sit Claude Certified Architect: Foundations (or Developer, if you go code-first)."],
- ["r3e","Publish a one-page ‘which technique do I need?’ guide for your towers."],
+ ["r3e","Publish a one-page ‘which technique do I need?’ guide for your teams."],
  ["r3f","Build Project 5 and write up when multi-agent is (and isn’t) worth the cost."]]},
-{ph:"Months 7–12",n:"Enterprise AI lead",goal:"Own governance, cost and quality of AI across towers.",tasks:[
- ["r4a","Draft an AI use-case intake and risk-tiering template for tower teams."],
+{ph:"Months 7–12",n:"Enterprise AI lead",goal:"Own governance, cost and quality of AI across teams.",tasks:[
+ ["r4a","Draft an AI use-case intake and risk-tiering template for your teams."],
  ["r4b","Ship Project 6: a deployed, secured assistant with CI/CD, an eval gate and monitoring."],
  ["r4c","Mentor five GenAI champions through Phase 1 using this atlas."],
  ["r4d","Sit Claude Certified Architect: Professional."],
@@ -3343,7 +3343,7 @@ GUIDES.push(
    {h:"CI/CD with an eval gate",x:"Pipeline runs tests and your eval set; fails below baseline.",r:"This is LLMOps in one sentence.",t:["cicd","eval","llmops"]},
    {h:"Deploy",x:"A cloud container service or free tier; HTTPS on.",t:["deploy","tls"]},
    {h:"Monitor",x:"Log tokens, latency, errors and feedback; a weekly review.",t:["observe","cost","perf"]}]},
-  {k:"tip",x:"This single project covers every certification domain. Present it to your towers as a demo — it doubles as roadmap evidence for Phase 3 and 4."}]}
+  {k:"tip",x:"This single project covers every certification domain. Present it to your teams as a demo — it doubles as roadmap evidence for Phase 3 and 4."}]}
 );
 
 /* ===== Two supporting domains: not layers of the stack, but what you use to build every layer ===== */
@@ -4688,7 +4688,7 @@ T.push(
 {id:"aiinit",t:"AI Initiative Lifecycle",d:"lead",lv:1,f:"initiative",
  s:"The repeatable path an organisation uses to take an AI idea from intake to scaled, measured value: discover, prioritise, build the case, prove feasibility, pilot, scale, operate and review.",
  a:"A drug pipeline: many candidates enter, gates filter them, and only the proven ones reach the market.",
- x:"40 ideas submitted in a quarter → 12 scored → 5 business cases → 3 proofs of concept → 2 pilots → 1 scaled to all towers.",
+ x:"40 ideas submitted in a quarter → 12 scored → 5 business cases → 3 proofs of concept → 2 pilots → 1 scaled to all teams.",
  dd:"Mature organisations treat AI as a portfolio, not a series of one-off projects. Each stage has an owner and an exit gate with explicit criteria (value, feasibility, risk, readiness), so weak ideas stop cheaply and strong ones get funded. The lifecycle loops: production metrics feed portfolio reviews, which re-prioritise the backlog.",
  say:"We run AI as a portfolio with stage gates — cheap to try, hard to scale without evidence.",
  iq:"How would you set up an AI intake-to-scale process for a 10,000-person organisation?",
@@ -5021,10 +5021,10 @@ const LEAD = [
    {h:"People you developed",x:"Champions trained, sessions run, community built.",t:["aicoe","change"]},
    {h:"Visible thought leadership",x:"Internal talks, written guides, a certification.",t:["aiarch"]}]},
   {k:"table",cap:"A 12-month development plan",cols:["Quarter","Build","Lead","Be visible"],rows:[
-   ["Q1","Projects 1–2 in the Build lab","Run the use-case scorer with one tower","15-minute AI basics session"],
+   ["Q1","Projects 1–2 in the Build lab","Run the use-case scorer with one team","15-minute AI basics session"],
    ["Q2","Projects 3–4; architect certification","Own one pilot end to end with a business case","Write up the pilot results"],
    ["Q3","Project 6 capstone","Set up intake and portfolio review for your area","Present at a leadership forum"],
-   ["Q4","Mentor two builders","Lead a cross-tower initiative","Publish an internal AI playbook"]]}]},
+   ["Q4","Mentor two builders","Lead a cross-team initiative","Publish an internal AI playbook"]]}]},
 
 {id:"l-cases",grp:"Learn from others",n:"20+ real-world case studies",lvl:1,mins:30,
  sub:"Successes, mixed results and cautionary tales from public reporting — each with the lesson for someone leading AI, and how to use it in an interview.",
@@ -5049,9 +5049,9 @@ const LEAD = [
    ["Head of AI / AI CoE Lead","Long-term — needs all of the above","Strategy, budget ownership, executive influence","Portfolio results across several teams"]]},
   {k:"table",cap:"Translate your experience — before and after",cols:["Before","After"],rows:[
    ["Built HTML consoles for the team","Designed and shipped internal tools that automated a manual reporting routine from about 45 minutes a day to under a minute"],
-   ["Managed NOC operations","Ran 24×7 operations across several towers to SLA — now applying the same monitoring and incident discipline to AI systems"],
+   ["Managed NOC operations","Ran 24×7 operations across several teams to SLA — now applying the same monitoring and incident discipline to AI systems"],
    ["Drove automation initiatives","Identified, prioritised and delivered automation use cases with measured time savings, adopted across teams"],
-   ["Won a Gen-AI Champion award","Recognised as Gen-AI Champion of the Year for driving AI adoption and enablement across teams"],
+   ["Won an internal AI award","Recognised with an AI champion award for driving AI adoption and enablement across teams"],
    ["Wrote documentation and training","Built AI learning programmes and handover packs that enabled colleagues to adopt AI tools"]]},
   {k:"steps",h:"A 90-day job-search plan",items:[
    {h:"Weeks 1–2: decide and position",x:"Choose a primary and secondary target role; write a two-line positioning statement.",t:["aiarch","mlopseng"]},
@@ -5985,6 +5985,7 @@ async function load(){
     if(raw){const v=JSON.parse(raw);if(v&&typeof v==="object")S=Object.assign(S,v)}
   }catch(e){}
   if(!Array.isArray(S.days))S.days=[];
+  if(typeof S.theme==="string"&&/^ac[^c](light|dark)$/.test(S.theme))S.theme="acc"+S.theme.slice(3);   // themes renamed in v7.0
 }
 let saveT=null, dirty=false, adopting=false, lastWritten=null;
 function writeNow(){
@@ -6052,11 +6053,11 @@ const THEMES=[
  ["brutal","Brutalist Pop","Colourful",["#FFF066","#FF5C39","#2563EB"]],
  ["clay","Bento Clay","Colourful",["#D24A30","#1E9E86","#FFD166"]],
  ["terminal","Terminal Ops","Colourful",["#4AF626","#FFB000","#00E5FF"]],
- ["acnlight","Accenture Light","Brand",["#A100FF","#000000","#FFFFFF"]],
- ["acndark","Accenture Dark","Brand",["#A100FF","#FFFFFF","#000000"]]];
-const DARK_THEMES=["neonnight","obsidian","acndark","terminal","peacock"];
+ ["acclight","Acc Light","Signature",["#A100FF","#000000","#FFFFFF"]],
+ ["accdark","Acc Dark","Signature",["#A100FF","#FFFFFF","#000000"]]];
+const DARK_THEMES=["neonnight","obsidian","accdark","terminal","peacock"];
 function drawSwatches(){
-  const groups=["Everyday","Colourful","Brand"];
+  const groups=["Everyday","Colourful","Signature"];
   $("#themeSw").innerHTML=groups.map(g=>`<div class="mgroup">${g}</div><div class="swatches">${THEMES.filter(t=>t[2]===g).map(t=>
     `<button class="sw${S.theme===t[0]?" on":""}" role="radio" aria-checked="${S.theme===t[0]}" data-th="${t[0]}"><span class="dots" aria-hidden="true">${t[3].map(c=>`<i style="background:${c}"></i>`).join("")}</span>${esc(t[1])}</button>`).join("")}</div>`).join("");
   $$("#themeSw .sw").forEach(b=>b.onclick=e=>{e.stopPropagation();applyTheme(b.dataset.th);toast(THEMES.find(t=>t[0]===b.dataset.th)[1]+" theme")});
