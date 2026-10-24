@@ -1,7 +1,8 @@
-/* Synapse offline support.
+/* AI Gurukul RJ777 — AI Learning Atlas · v7.0 · offline support.
+   Developed by Ravindra Jain · © 2026 · CC BY-NC-SA 4.0.
    Pages: network first, so a newly uploaded index.html shows up straight away when online,
    with the cached copy used when there is no signal. Everything else: cache first. */
-const CACHE = "synapse-v4";
+const CACHE = "ai-gurukul-rj777-v7";
 const CORE = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", e => {

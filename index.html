@@ -5969,13 +5969,13 @@ const GREF={}; GUIDES.forEach(g=>g.blocks.forEach(b=>(b.items||[]).forEach(it=>(
 const LREF={}; LEAD.forEach(g=>g.blocks.forEach(b=>(b.items||[]).forEach(it=>(it.t||[]).forEach(id=>{if(!BY[id])return;(LREF[id]=LREF[id]||[]);if(!LREF[id].includes(g.id))LREF[id].push(g.id)}))));
 
 /* ───── state & storage ───── */
-const KEY="synapse-atlas-v1";
+const KEY="ai-gurukul-rj777-v1";
 let S={m:{},q:[],road:{},theme:"auto",days:[],last:null,lab:{},srs:{},notes:{},pq:{},flowSeen:{},path:null,lastExport:null};
 /* Storage adapter — Claude preview uses window.storage; a hosted copy (GitHub Pages,
    phone browser) uses this browser's localStorage. Either may be missing, e.g. in
    private browsing, in which case progress lives in memory and export still works. */
 const hasStore=()=>!!(window.storage&&typeof window.storage.get==="function");
-const LS=(()=>{if(hasStore())return null;try{const k="__synapse_probe";window.localStorage.setItem(k,"1");window.localStorage.removeItem(k);return window.localStorage}catch(e){return null}})();
+const LS=(()=>{if(hasStore())return null;try{const k="__agrj777_probe";window.localStorage.setItem(k,"1");window.localStorage.removeItem(k);return window.localStorage}catch(e){return null}})();
 const SAVE_MODE=hasStore()?"claude":LS?"device":"none";
 async function load(){
   try{
@@ -7079,7 +7079,7 @@ function pick(i){const h=sHits[i];$("#sres").classList.add("hidden");$("#gsearch
 
 /* ════════════ EXPORT / IMPORT ════════════ */
 function exportJSON(){
-  const blob=new Blob([JSON.stringify({app:"synapse-atlas",name:"AI Gurukul RJ777 — AI Learning Atlas",version:"7.0",credit:"AI Gurukul RJ777 — Developed by Ravindra Jain",licence:"CC BY-NC-SA 4.0",v:1,at:new Date().toISOString(),data:S},null,2)],{type:"application/json"});
+  const blob=new Blob([JSON.stringify({app:"ai-gurukul-rj777",name:"AI Gurukul RJ777 — AI Learning Atlas",version:"7.0",credit:"AI Gurukul RJ777 — Developed by Ravindra Jain",licence:"CC BY-NC-SA 4.0",v:1,at:new Date().toISOString(),data:S},null,2)],{type:"application/json"});
   const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="ai-gurukul-rj777-progress-"+new Date().toISOString().slice(0,10)+".json";document.body.appendChild(a);a.click();
   setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);S.lastExport=new Date().toISOString().slice(0,10);save();toast("Progress exported");
 }

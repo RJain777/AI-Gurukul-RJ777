@@ -4,6 +4,8 @@
 
 © 2026 Ravindra Jain · Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — see [LICENSE.md](LICENSE.md)
 
+### ▶ Open the portal: **https://rjain777.github.io/AI-Gurukul-RJ777/**
+
 A single-page, offline-capable learning portal that coaches you through AI every day — from first concepts to building agents, leading AI initiatives, and preparing for Claude certifications. It runs entirely in your browser: no login, no server, no tracking. Progress is saved on your device.
 
 **What's inside:** 242 terms across 13 domains · 15 animated flow diagrams · 54 Build-lab guides and projects (including a 5-guide AIOps track and a 10-module app workshop) · 11 Lead sections with 23 real-world case studies and 40 mock-interview questions · 6 guided paths · 64 scenario quiz questions · a live "Latest in AI" news page · 13 themes.
@@ -242,10 +244,14 @@ Hosting the portal on GitHub Pages gives you one link that works on any laptop o
 
 ### First-time setup (web browser only, no tools needed)
 
-1. Sign in at github.com and choose **New repository**. Name it, for example, `ai-gurukul-rj777`. Choose **Public** (see privacy notes below), then **Create repository**.
+1. Sign in at github.com and choose **New repository**. Name it `AI-Gurukul-RJ777` (the name becomes part of the link, capitals included). Choose **Public** (see privacy notes below), then **Create repository**.
 2. Press **uploading an existing file**, drag in all the files above, and press **Commit changes**.
-3. Open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, branch **main**, folder **/ (root)**, then **Save**.
-4. Wait a minute or two. Your link appears at the top of the Pages screen: `https://<your-username>.github.io/ai-gurukul-rj777/`.
+3. Click **Settings** — the last tab in the row at the top of the repository (gear icon). On a narrow window it may be under a **⋯** menu at the end of the tab row.
+4. In the left sidebar, under **Code and automation**, click **Pages**.
+5. Under **Build and deployment** → **Source**, choose **Deploy from a branch**. Under **Branch**, change **None** to **main**, keep **/ (root)**, then press **Save**.
+6. Wait one or two minutes and refresh the Pages screen. Your link appears at the top: `https://rjain777.github.io/AI-Gurukul-RJ777/` (the repository part is case-sensitive).
+7. Optional: on the repository's main page, click the gear icon beside **About**, tick **Use your GitHub Pages website**, and save — the live link then shows under the description.
+8. Optional but recommended: **Releases → Create a new release**, tag `v7.0`, title "AI Gurukul RJ777 v7.0", and publish. It gives the version a dated, public record.
 
 ### Using it on your phone (and offline while travelling)
 
@@ -256,7 +262,7 @@ Hosting the portal on GitHub Pages gives you one link that works on any laptop o
 
 ### Updating to a new version
 
-Upload only the new `index.html`, using **Add file → Upload files** and **Commit changes**. The other files stay as they are. The page checks for a new version whenever you're online, so the update appears on your next visit. Your progress is untouched, because it's stored in your browser, not in the file.
+Upload the new files with **Add file → Upload files** and **Commit changes**. Files with the same name are replaced — there's no need to delete anything first, and keeping the repository keeps its dated history (your public proof of authorship). Usually only `index.html` changes; when a release includes other files, upload them all together in one commit. The page checks for a new version whenever you're online, so the update appears on your next visit. Your progress is untouched, because it's stored in your browser, not in the file.
 
 ### Privacy and access
 
