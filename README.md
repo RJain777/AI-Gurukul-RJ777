@@ -48,7 +48,7 @@ The portal has five areas along the top. Each area has a second row of sections.
 | Area | Sections | Use it for |
 |---|---|---|
 | **Today** | Today · Paths · Latest in AI | Your daily session, your path, this week's AI news |
-| **Learn** | Atlas · Map · Cheat sheet · Flows | Understanding concepts and how they connect |
+| **Learn** | Atlas · Big picture · Map · Cheat sheet · Flows | Understanding concepts and how they connect |
 | **Practise** | Flashcards · Quiz · Mock interviews ↗ | Testing yourself |
 | **Build** | Build lab | Hands-on guides, projects, the AIOps track and the app workshop |
 | **Grow** | Lead · Certification · Roadmap | Leadership, business value, certification readiness, career plan |
@@ -56,6 +56,7 @@ The portal has five areas along the top. Each area has a second row of sections.
 **Learn — what each section does**
 
 - **Atlas** — the AI stack as layers, from fundamentals to safety, plus a "start here" story and term chips you can tap.
+- **Big picture** — two interactive posters. *How AI works — end to end* joins all 15 flows into one sequence (data → training → model → inference → prompting, RAG and agents → delivery → value, with operations and trust underneath) using 117 terms; hover any term for its definition, click to open it, and use the ▶ buttons to open the detailed flows. *Your AI learning path* shows nine stages with the terms to master, the tasks to do, live progress and a "You are here" marker.
 - **Map** — every term as a mind map grouped by domain.
 - **Cheat sheet** — every term in one scannable page, grouped and colour-coded.
 - **Flows** — 15 step-by-step animated diagrams (how a prompt becomes an answer, how RAG works, how an agent loops, the AIOps loop, a full-stack app, and more). Press **Walk it step by step**.

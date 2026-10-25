@@ -1200,6 +1200,116 @@ footer .credit{margin:0 0 6px;font-weight:600;color:var(--text-2)}
 @media print{.cornerbadge{position:static;display:block;text-align:center;margin-top:8px}}
 
 
+/* ═════════ BIG PICTURE posters ═════════ */
+#v-big{--sc:var(--k4)}
+.bigtabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.poster{position:relative;padding:26px 22px 18px;border-radius:var(--r-xl);overflow:hidden;
+  background:
+    linear-gradient(color-mix(in srgb,var(--text) 4%,transparent) 1px,transparent 1px) 0 0/28px 28px,
+    linear-gradient(90deg,color-mix(in srgb,var(--text) 4%,transparent) 1px,transparent 1px) 0 0/28px 28px,
+    var(--surface);
+  border:var(--border-w) solid var(--border);box-shadow:var(--sh-md)}
+.ptitle{text-align:center;font-size:clamp(1.6rem,4vw,2.9rem);letter-spacing:.02em;text-transform:uppercase;margin:0 0 6px}
+.ptitle span{color:var(--k4);text-shadow:0 0 22px color-mix(in srgb,var(--k4) 45%,transparent)}
+.lpath .ptitle span{color:var(--k6);text-shadow:0 0 22px color-mix(in srgb,var(--k6) 45%,transparent)}
+.psub{text-align:center;color:var(--text-2);max-width:780px;margin:0 auto 20px;font-size:.92rem}
+.plinks{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:visible}
+.plink{fill:none;stroke-width:2.4;stroke-linecap:round;stroke-dasharray:7 9;opacity:.85;animation:plflow 1.6s linear infinite}
+@keyframes plflow{to{stroke-dashoffset:-32}}
+@media (prefers-reduced-motion:reduce){.plink{animation:none}}
+.plegend{position:relative;z-index:2;margin-top:16px;font-size:.78rem;color:var(--text-3);text-align:center}
+.lgd{display:inline-flex;gap:10px;align-items:center;margin-left:8px}
+.lgd i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:3px;vertical-align:-1px;border:2px solid var(--text-3)}
+.lgd i.known{background:var(--ok);border-color:var(--ok)}.lgd i.learning{background:color-mix(in srgb,var(--k4) 60%,transparent);border-color:var(--k4)}
+
+/* ecosystem grid */
+.egrid{position:relative;z-index:2;display:grid;gap:22px 26px;align-items:stretch;
+  grid-template-columns:minmax(0,.85fr) repeat(4,minmax(0,1fr)) minmax(0,1.1fr) minmax(0,1fr) minmax(0,.95fr);
+  grid-template-areas:
+   "tools data train model infer prm  deliv prov"
+   "tools data train model infer know deliv out"
+   "qual  data train model infer act  deliv out"
+   ".     ops  ops   ops   ops   ops  ops   .";}
+.eframe{grid-column:2/8;grid-row:1/4;margin:-12px;border:2px dashed color-mix(in srgb,var(--text) 22%,transparent);border-radius:var(--r-xl);position:relative;pointer-events:none}
+.eframe span{position:absolute;top:-11px;left:50%;transform:translateX(-50%);padding:1px 12px;font-size:.7rem;font-weight:800;letter-spacing:.14em;color:var(--text-3);background:var(--surface);border-radius:var(--r-pill)}
+.enode,.lnode{position:relative;display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:var(--r-lg);
+  background:linear-gradient(170deg,color-mix(in srgb,var(--dc) 13%,var(--surface)),color-mix(in srgb,var(--dc) 4%,var(--surface)) 70%);
+  border:2px solid color-mix(in srgb,var(--dc) 70%,var(--border));
+  box-shadow:0 0 0 1px color-mix(in srgb,var(--dc) 18%,transparent),0 0 22px color-mix(in srgb,var(--dc) 22%,transparent)}
+.enode.small{padding:10px}
+.ehead{display:flex;gap:9px;align-items:center}
+.ehead b{display:block;font-family:var(--f-display);font-size:.98rem;color:var(--dc);text-transform:uppercase;letter-spacing:.04em;line-height:1.15}
+.ehead small{display:block;font-size:.72rem;color:var(--text-3)}
+.enum{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-mono);font-weight:800;font-size:.82rem;
+  background:var(--dc);color:var(--surface);box-shadow:0 0 12px color-mix(in srgb,var(--dc) 55%,transparent)}
+.echips{display:flex;flex-wrap:wrap;gap:5px}
+.pchip{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:var(--r-pill);font-size:.74rem;font-weight:650;line-height:1.3;
+  color:var(--text);background:color-mix(in srgb,var(--dc) 14%,var(--surface-2));border:1px solid color-mix(in srgb,var(--dc) 55%,transparent);cursor:pointer;transition:transform var(--dur) var(--ease),box-shadow var(--dur)}
+.pchip:hover,.pchip:focus-visible{transform:translateY(-1px);box-shadow:0 0 0 2px var(--dc),0 4px 14px color-mix(in srgb,var(--dc) 35%,transparent);outline:none}
+.pchip.known{background:color-mix(in srgb,var(--ok) 16%,var(--surface-2));border-color:var(--ok)}
+.pchip.known i{color:var(--ok);font-style:normal;font-weight:900}
+.pchip.learning{border-style:dashed}
+.efam{border-top:1px dashed color-mix(in srgb,var(--dc) 40%,transparent);padding-top:6px}
+.efam small{display:block;font-size:.68rem;color:var(--text-3);margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em}
+.eflow{margin-top:auto;align-self:flex-start;font-size:.72rem;font-weight:700;color:var(--dc);background:none;border:1px solid color-mix(in srgb,var(--dc) 50%,transparent);border-radius:var(--r-pill);padding:3px 10px}
+.eflow:hover{background:color-mix(in srgb,var(--dc) 14%,transparent)}
+.enode.band{flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.enode.band .ehead{flex:0 0 auto}
+.enode.screen{padding-top:26px}
+.scrbar{position:absolute;top:8px;left:12px;display:flex;gap:5px}
+.scrbar i{width:8px;height:8px;border-radius:50%;background:color-mix(in srgb,var(--dc) 70%,var(--text-3))}
+.scrbar i:nth-child(1){background:var(--k10)}.scrbar i:nth-child(2){background:var(--k4)}.scrbar i:nth-child(3){background:var(--k6)}
+
+/* learning-path grid: 1→5 on top, 6→9 back along the bottom, then the goal */
+.lsum{position:relative;z-index:2;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;margin:-6px 0 22px;font-size:.88rem}
+.meter.big{width:min(360px,80%);height:10px}
+.meter.big i{background:linear-gradient(90deg,var(--k1),var(--k6),var(--k11))}
+.lgrid{position:relative;z-index:2;display:grid;gap:30px 26px;grid-template-columns:repeat(5,minmax(0,1fr));
+  grid-template-areas:"s1 s2 s3 s4 s5" "goal s9 s8 s7 s6"}
+.lnode .meter{height:6px}
+.lnode.done{opacity:.92}
+.lnode.done .enum{background:var(--ok)}
+.lnode.here{box-shadow:0 0 0 2px var(--dc),0 0 34px color-mix(in srgb,var(--dc) 45%,transparent);animation:herepulse 2.4s ease-in-out infinite}
+@keyframes herepulse{50%{box-shadow:0 0 0 2px var(--dc),0 0 14px color-mix(in srgb,var(--dc) 25%,transparent)}}
+@media (prefers-reduced-motion:reduce){.lnode.here{animation:none}}
+.youare{position:absolute;top:-12px;right:12px;font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:2px 10px;border-radius:var(--r-pill);background:var(--dc);color:var(--surface)}
+.lsec{font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);margin:2px 0 -2px}
+.ltasks{list-style:none;display:flex;flex-direction:column;gap:3px}
+.ltask{display:flex;gap:7px;align-items:flex-start;text-align:left;width:100%;padding:5px 7px;border-radius:var(--r-sm);font-size:.78rem;color:var(--text);background:color-mix(in srgb,var(--dc) 6%,transparent)}
+.ltask:hover{background:color-mix(in srgb,var(--dc) 16%,transparent)}
+.ltask .tk{flex:none;width:18px;text-align:center}
+.ltask.done{color:var(--text-3);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--ok) 60%,transparent)}
+.ltask.done .tk{color:var(--ok);font-weight:900}
+.lnode.goal{justify-content:center;text-align:left}
+.lnode.goal p{font-size:.84rem;color:var(--text-2)}
+
+/* tooltip */
+.ptip{position:fixed;z-index:120;padding:12px 14px;border-radius:var(--r-md);background:var(--surface);color:var(--text);
+  border:2px solid var(--dc,var(--a1));box-shadow:var(--sh-lg),0 0 24px color-mix(in srgb,var(--dc,var(--a1)) 30%,transparent);font-size:.84rem;pointer-events:auto}
+.ptip[hidden]{display:none}
+.pt-h{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;margin-bottom:6px}
+.pt-h b{font-family:var(--f-display);font-size:1rem}
+.ptip p{margin:0 0 6px;max-width:none}
+.pt-a{color:var(--text-2);font-style:italic;font-size:.8rem}
+.pt-f{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.74rem}
+.pt-st.known{color:var(--ok);font-weight:700}.pt-st.learning{color:var(--k4);font-weight:700}
+
+/* narrower screens: one column, connectors run top to bottom */
+@media (max-width:1180px){
+  .egrid{grid-template-columns:minmax(0,1fr);grid-template-areas:"tools" "qual" "data" "train" "model" "infer" "prm" "know" "act" "deliv" "prov" "out" "ops";gap:26px}
+  .eframe{display:none}
+  .lgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"s1 s2" "s4 s3" "s5 s6" "s8 s7" "s9 goal"}
+}
+@media (max-width:720px){
+  .poster{padding:18px 12px 14px}
+  .lgrid{grid-template-columns:minmax(0,1fr);grid-template-areas:"s1" "s2" "s3" "s4" "s5" "s6" "s7" "s8" "s9" "goal"}
+  .rbar{grid-template-columns:120px minmax(0,1fr) 28px}
+}
+@media (hover:none){.pchip{min-height:34px;padding:6px 11px}.ltask{min-height:40px;align-items:center}}
+.eflows{margin-top:auto;display:flex;flex-wrap:wrap;gap:4px}
+.eflows .eflow{margin-top:0}
+
+
 </style>
 </head>
 <body>
@@ -1269,6 +1379,12 @@ footer .credit{margin:0 0 6px;font-weight:600;color:var(--text-2)}
 
 <!-- ABOUT -->
 <section class="view" id="v-about"><div id="aboutBox"></div></section>
+
+<!-- BIG PICTURE -->
+<section class="view" id="v-big">
+ <div class="vhead"><div><h2>Big picture</h2><p>Two posters that tie the whole atlas together: how AI works from data to value, and the path to learn it — every chip is a term you can hover or open.</p></div></div>
+ <div id="bigBox"></div>
+</section>
 
 <!-- ATLAS -->
 <section class="view" id="v-atlas">
@@ -1422,6 +1538,7 @@ footer .credit{margin:0 0 6px;font-weight:600;color:var(--text-2)}
 
 </main>
 <footer><div class="wrap"><p class="credit">AI Gurukul RJ777 — AI Learning Atlas · v7.0 · Developed by Ravindra Jain · © 2026 · <button class="linkbtn" id="fAbout">About &amp; licence</button></p>Content reflects public information as of October 2026. AI moves quickly — model names, product features and certification details change; verify against official documentation before relying on specifics.</div></footer>
+<div class="ptip" id="ptip" role="tooltip" hidden></div>
 <div class="cornerbadge" aria-hidden="true">AI Gurukul RJ777 · by Ravindra Jain</div>
 </div>
 
@@ -5863,6 +5980,7 @@ const PATHS=[
 
 /* ===== WHAT'S NEW ===== */
 const WHATSNEW=[
+ ["2026-10","Big picture: an interactive AI ecosystem poster and a learning-path poster, with hover definitions on every term"],
  ["2026-10","Renamed to AI Gurukul RJ777 — AI Learning Atlas · v7.0, with the name shown on every page"],
  ["2026-10","Latest in AI page: refresh for live releases, research papers, trending models and rising repositories, with a trend radar"],
  ["2026-10","Today page with a daily coaching session and spaced repetition"],
@@ -5939,6 +6057,65 @@ const NEWS_TOPICS=[
  ["Safety, security & alignment",/safety|secur|jailbreak|injection|alignment|red[- ]team/i,"alignment"],
  ["Policy & regulation",/regulat|policy|\blaw\b|AI Act|government|export control/i,"gov"]
 ];
+
+/* ===== BIG PICTURE — two interactive posters built from the atlas's own terms ===== */
+
+/* 1 · THE AI ECOSYSTEM — every flow in the atlas, joined into one sequence */
+const ECO={
+ title:["THE ","AI"," ECOSYSTEM"],
+ sub:"How AI works end to end — from raw data to business value. Hover any term for a quick definition; click for the full drill-down.",
+ nodes:[
+  /* left rail */
+  {id:"tools",area:"tools",h:"Builder tools",k:12,small:true,flow:["langs"],t:["python","sdk","claudecode","git","api","jsonrpc"]},
+  {id:"qual",area:"qual",h:"Quality",k:4,small:true,t:["eval","judge","bench","evalmetrics","redteam"]},
+  /* the main sequence */
+  {id:"data",area:"data",n:1,h:"Data",cap:"raw material",k:1,flow:["life"],t:["dataset","synthetic","tokenization","token","bpe","vocab","embedding"]},
+  {id:"train",area:"train",n:2,h:"Training",cap:"the factory",k:6,flow:["life"],t:["pretrain","ntp","loss","gd","backprop","sft","rlhf","cai","lora","distill","quant"]},
+  {id:"model",area:"model",n:3,h:"The model",cap:"the engine",k:2,flow:["xfmr","lstm"],t:["transformer","attention","mha","posenc","ffn","moe","param","llm","reasoning","multimodal"],
+   fam:{h:"Other families",t:["rnn","lstm","cnn","diffusion"]}},
+  {id:"infer",area:"infer",n:4,h:"Inference",cap:"the runtime",k:7,flow:["infer"],t:["context","autoreg","logits","temp","topp","kv","maxtok","stream","latency","cost","hallucination"]},
+  {id:"prm",area:"prm",n:5,h:"Prompting",cap:"steer it",k:5,flow:["choose"],t:["system","promptEng","fewshot","cot","structured","xml","ctxeng","cache"]},
+  {id:"know",area:"know",n:6,h:"Knowledge · RAG",cap:"ground it",k:3,flow:["rag"],t:["rag","chunk","vectordb","semantic","hnsw","hybrid","rerank","grounding","citations"]},
+  {id:"act",area:"act",n:7,h:"Action · Agents",cap:"let it act",k:8,flow:["agent","mcp","orch"],t:["tooluse","mcp","mcpserver","agent","loop","planning","memory","multiagent","orch","a2a","hooks"]},
+  {id:"deliv",area:"deliv",n:8,h:"Delivery",cap:"ship it",k:9,flow:["api","deploy","fullstack"],t:["gateway","ratelimit","deploy","container","cicd","fallback","fullstack","authn"]},
+  /* right rail */
+  {id:"prov",area:"prov",h:"Model providers",k:11,small:true,t:["frontier","openw","openai","ollama","hf","cloudai","tier","routing"]},
+  {id:"out",area:"out",n:9,h:"Value",cap:"what users get",k:10,screen:true,flow:["initiative"],t:["chatbot","claudecode","copilotstudio","aiops","runbookauto","usecase","bizcase"]},
+  /* bottom band */
+  {id:"ops",area:"ops",h:"Operations & trust — across every stage",k:9,band:true,flow:["aiops"],t:["observe","trace","llmops","guardrail","hitl","injection","owasp","pii","rai","alignment","gov","euact"]}
+ ],
+ edges:[["tools","data"],["qual","train"],["data","train"],["train","model"],["model","infer"],["prov","model"],
+        ["infer","prm"],["infer","know"],["infer","act"],["prm","deliv"],["know","deliv"],["act","deliv"],["deliv","out"],
+        ["ops","infer"],["ops","deliv"]],
+ legend:"Numbers show the order a model's life and a request's journey take. The ▶ buttons open the 15 detailed animated flows behind each stage.",
+ flabel:{life:"Model lifecycle",xfmr:"Inside a transformer",lstm:"Sequence models",infer:"Prompt → answer",choose:"Choose the approach",rag:"RAG",agent:"Agent loop",mcp:"MCP",orch:"Orchestration",api:"API call",deploy:"Deploy",fullstack:"Full-stack app",initiative:"AI initiatives",aiops:"AIOps loop",langs:"Languages map"}
+};
+
+/* 2 · THE AI LEARNING PATH — what to learn and do, in order, with live progress */
+const LPATH={
+ title:["THE ","AI LEARNING"," PATH"],
+ sub:"Nine stages from first concepts to leading AI. Each shows the terms to master and the tasks to do — ticks appear as you progress.",
+ stages:[
+  {n:1,h:"Foundations",k:1,t:["ai","ml","dl","nn","genai","training","dataset","param","overfit"],
+   do:[["path","p-found","Start the AI foundations path"],["view","today","Do the 10-minute Today session daily"],["flow","life","Walk: how a model is born"],["quiz",1,"Checkpoint quiz (70%+)"]]},
+  {n:2,h:"How LLMs work",k:2,t:["token","tokenization","context","ntp","temp","embedding","transformer","attention","llm","hallucination"],
+   do:[["guide","g-llm","Read: How transformers & LLMs work"],["flow","infer","Walk: prompt to answer"],["flow","xfmr","Walk: inside a transformer"],["guide","g-tinyllm","Build a tiny language model"]]},
+  {n:3,h:"Prompting",k:5,t:["prompt","system","promptEng","fewshot","cot","structured","ctxeng"],
+   do:[["guide","g-prompt","Read: Prompt engineering playbook"],["guide","g-prompts","Use the daily-work prompt library"],["guide","p1","Project 1: ticket summariser"],["quiz",3,"Checkpoint quiz (70%+)"]]},
+  {n:4,h:"Knowledge · RAG",k:3,t:["rag","chunk","vectordb","semantic","rerank","hybrid","grounding","citations"],
+   do:[["guide","g-rag","Read: How to build a RAG application"],["guide","g-vdb","Vector databases hands-on"],["flow","rag","Walk: the RAG flow"],["guide","p2","Project 2: runbook Q&A with RAG"]]},
+  {n:5,h:"Tools & agents",k:8,t:["tooluse","mcp","agent","loop","planning","memory","multiagent","orch","hitl"],
+   do:[["guide","g-agent","Read: How to build an AI agent"],["guide","g-mcp","Build an MCP server"],["flow","agent","Walk: the agent loop"],["guide","p3","Project 3: your first MCP server"],["guide","g-multi","Design multi-agent systems"]]},
+  {n:6,h:"Build & ship",k:12,t:["api","python","sdk","fullstack","authn","deploy","container","cicd"],
+   do:[["guide","g-api","Read: How APIs work"],["guide","w0","Run the App workshop"],["flow","fullstack","Walk: a full-stack app"],["guide","g-deploy","Deploy a GenAI app end to end"]]},
+  {n:7,h:"Operate & secure",k:9,t:["eval","observe","trace","llmops","guardrail","injection","owasp","pii","cost"],
+   do:[["guide","g-evals","Read: Evals in depth"],["guide","g-trace","Observability & tracing"],["guide","g-sec","Security across AI, APIs & apps"],["quiz",7,"Checkpoint quiz (70%+)"]]},
+  {n:8,h:"Specialise",k:6,t:["aiops","eventcorr","anomaly","runbookauto","topology","aiarch"],
+   do:[["guide","a1","AIOps: where AI helps in IT operations"],["guide","a2","Alert noise reduction demo"],["guide","p4","Project 4: incident triage agent"],["path","p-aiops","Complete the AIOps specialist path"]]},
+  {n:9,h:"Lead & certify",k:11,t:["usecase","valfeas","bizcase","aicoe","change","gov"],
+   do:[["lead","l-usecase","Score real use cases"],["lead","l-impact","Build a business case (ROI)"],["lead","l-mock","Practise mock interviews"],["view","cert","Check certification readiness"],["path","p-lead","Complete the AI leader path"]]}
+ ]
+};
 
 </script>
 <script>
@@ -6066,7 +6243,7 @@ function drawSwatches(){
   $("#themeName").textContent=cur[1];
   $("#themeBtn").setAttribute("aria-label","Theme: "+cur[1]+". Choose a theme");
 }
-function applyTheme(k){
+function applyTheme(k){setTimeout(()=>{if(cur==="big")drawLinks()},700);
   if(!THEMES.some(t=>t[0]===k))k="auto";
   const html=document.documentElement; html.setAttribute("data-theme",k);
   const dark=DARK_THEMES.includes(k)||(k==="auto"&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches);
@@ -6077,13 +6254,13 @@ function applyTheme(k){
 }
 
 /* ───── router ───── */
-const VIEWS=["today","paths","news","about","atlas","map","cheat","cards","flows","lab","lead","quiz","cert","road"];
+const VIEWS=["today","paths","news","about","atlas","big","map","cheat","cards","flows","lab","lead","quiz","cert","road"];
 let cur="atlas";
 function go(v){
   if(!VIEWS.includes(v))v="atlas"; cur=v;
   $$(".view").forEach(el=>el.classList.toggle("on",el.id==="v-"+v));
   drawNav(v);
-  ({atlas:renderAtlas,map:renderMap,cheat:renderCheat,cards:renderCards,flows:renderFlows,lab:renderLab,lead:renderLead,today:renderToday,paths:renderPaths,news:renderNews,about:renderAbout,quiz:renderQuiz,cert:renderCert,road:renderRoad})[v]();
+  ({atlas:renderAtlas,map:renderMap,cheat:renderCheat,cards:renderCards,flows:renderFlows,lab:renderLab,lead:renderLead,big:renderBig,today:renderToday,paths:renderPaths,news:renderNews,about:renderAbout,quiz:renderQuiz,cert:renderCert,road:renderRoad})[v]();
   window.scrollTo({top:0,behavior:"auto"});
 
   S.last=Object.assign(S.last||{},{v});save();
@@ -6700,9 +6877,9 @@ function drawMock(){
 }
 
 /* ════════════ COACH: navigation groups, spaced repetition, Today, Paths, search, notes, freshness ════════════ */
-const GROUPS=[["today","Today",2,["today","paths","news"]],["learn","Learn",1,["atlas","map","cheat","flows"]],["practise","Practise",5,["cards","quiz"]],["build","Build",8,["lab"]],["grow","Grow",11,["lead","cert","road","about"]]];
-const VLABEL={today:"Today",paths:"Paths",news:"Latest in AI",about:"About",atlas:"Atlas",map:"Map",cheat:"Cheat sheet",flows:"Flows",cards:"Flashcards",quiz:"Quiz",lab:"Build lab",lead:"Lead",cert:"Certification",road:"Roadmap"};
-const VCOL={today:2,paths:6,news:7,about:11,atlas:2,map:9,cheat:3,flows:7,cards:5,quiz:4,lab:8,lead:11,cert:6,road:1};
+const GROUPS=[["today","Today",2,["today","paths","news"]],["learn","Learn",1,["atlas","big","map","cheat","flows"]],["practise","Practise",5,["cards","quiz"]],["build","Build",8,["lab"]],["grow","Grow",11,["lead","cert","road","about"]]];
+const VLABEL={big:"Big picture",today:"Today",paths:"Paths",news:"Latest in AI",about:"About",atlas:"Atlas",map:"Map",cheat:"Cheat sheet",flows:"Flows",cards:"Flashcards",quiz:"Quiz",lab:"Build lab",lead:"Lead",cert:"Certification",road:"Roadmap"};
+const VCOL={big:4,today:2,paths:6,news:7,about:11,atlas:2,map:9,cheat:3,flows:7,cards:5,quiz:4,lab:8,lead:11,cert:6,road:1};
 const groupOf=v=>(GROUPS.find(g=>g[3].includes(v))||GROUPS[0]);
 function drawNav(v){
   const g=groupOf(v);
@@ -7012,6 +7189,108 @@ function renderAbout(){
   $("#aboutMail").href="mailto:"+em+"?subject="+encodeURIComponent("About AI Gurukul RJ777");
   $("#aboutCopy").onclick=()=>copyText(CREDIT.attribution);
 }
+
+/* ════════════ BIG PICTURE — the AI ecosystem poster and the learning-path poster ════════════ */
+let BV="eco";
+const termState=id=>isKnown(id)?"known":(S.srs&&S.srs[id])?"learning":"new";
+function pchip(id,hue){const t=BY[id];if(!t)return"";const st=termState(id);
+  return `<button class="pchip ${st}" data-pt="${id}" style="--dc:${hue||dcv(t.d)}" aria-label="${esc(t.t)}">${st==="known"?'<i aria-hidden="true">✓</i>':""}${esc(shortName(t.t))}</button>`}
+function posterTitle(a){return `<h2 class="ptitle">${esc(a[0])}<span>${esc(a[1])}</span>${esc(a[2])}</h2>`}
+function renderBig(){
+  const box=$("#bigBox");
+  box.innerHTML=`<div class="bigtabs" role="tablist">
+     <button class="btn ${BV==="eco"?"pri":"ghost"}" data-bv="eco" role="tab" aria-selected="${BV==="eco"}">How AI works — end to end</button>
+     <button class="btn ${BV==="path"?"pri":"ghost"}" data-bv="path" role="tab" aria-selected="${BV==="path"}">Your AI learning path</button></div>
+   <div id="posterWrap">${BV==="eco"?ecoHTML():pathHTML()}</div>`;
+  $$("[data-bv]",box).forEach(b=>b.onclick=()=>{BV=b.dataset.bv;renderBig()});
+  wirePoster($("#posterWrap"));
+  requestAnimationFrame(()=>drawLinks());
+}
+function ecoHTML(){
+  return `<section class="poster eco" id="poster">${posterTitle(ECO.title)}<p class="psub">${esc(ECO.sub)}</p>
+   <div class="egrid">
+    <div class="eframe" aria-hidden="true"><span>THE AI STACK</span></div>
+    ${ECO.nodes.map(n=>`<div class="enode${n.small?" small":""}${n.band?" band":""}${n.screen?" screen":""}" data-node="${n.id}" style="grid-area:${n.area};--dc:var(--k${n.k})">
+      ${n.screen?'<div class="scrbar" aria-hidden="true"><i></i><i></i><i></i></div>':""}
+      <div class="ehead">${n.n?`<span class="enum">${n.n}</span>`:""}<div><b>${esc(n.h)}</b>${n.cap?`<small>${esc(n.cap)}</small>`:""}</div></div>
+      <div class="echips">${n.t.map(id=>pchip(id,`var(--k${n.k})`)).join("")}</div>
+      ${n.fam?`<div class="efam"><small>${esc(n.fam.h)}</small><div class="echips">${n.fam.t.map(id=>pchip(id)).join("")}</div></div>`:""}
+      ${n.flow?`<div class="eflows">${n.flow.map(f=>`<button class="eflow" data-flow="${f}" title="Open the detailed animated flow">▶ ${esc(ECO.flabel[f]||f)}</button>`).join("")}</div>`:""}</div>`).join("")}
+   </div>
+   <svg class="plinks" aria-hidden="true"></svg>
+   <p class="plegend">${esc(ECO.legend)} <span class="lgd"><i class="known"></i>known <i class="learning"></i>learning <i class="new"></i>not started</span></p></section>`}
+function stageTaskDone(st,tk){const [k,id]=tk;
+  if(k==="guide")return !!(S.lab||{})[id];
+  if(k==="lead")return !!((S.lead||{}).done||{})[id];
+  if(k==="flow")return !!(S.flowSeen||{})[id];
+  if(k==="path"){const p=PATHS.find(x=>x.id===id);return p?pathProg(p).pct===100:false}
+  if(k==="quiz")return ((S.pq||{})["bp:"+id]||0)>=70;
+  if(k==="view"&&id==="today")return (S.days||[]).includes(today());
+  return false}
+function stagePct(st){const n=st.t.length+st.do.length;const d=st.t.filter(isKnown).length+st.do.filter(tk=>stageTaskDone(st,tk)).length;return Math.round(d/n*100)}
+function pathHTML(){
+  const pcts=LPATH.stages.map(stagePct),here=pcts.findIndex(p=>p<100),overall=Math.round(pcts.reduce((a,b)=>a+b,0)/pcts.length);
+  const ico={guide:"📘",lead:"★",flow:"▶",path:"🧭",quiz:"✎",view:"→"};
+  const card=(st,i)=>`<div class="lnode${i===here?" here":""}${pcts[i]===100?" done":""}" data-node="s${st.n}" style="grid-area:s${st.n};--dc:var(--k${st.k})">
+     ${i===here?'<span class="youare">You are here</span>':""}
+     <div class="ehead"><span class="enum">${pcts[i]===100?"✓":st.n}</span><div><b>${esc(st.h)}</b><small>${pcts[i]}% complete</small></div></div>
+     <div class="meter"><i style="width:${pcts[i]}%;background:var(--k${st.k})"></i></div>
+     <p class="lsec">Master these terms</p><div class="echips">${st.t.map(id=>pchip(id,`var(--k${st.k})`)).join("")}</div>
+     <p class="lsec">Do</p><ul class="ltasks">${st.do.map((tk,j)=>{const d=stageTaskDone(st,tk);return `<li><button class="ltask${d?" done":""}" data-tk="${i}:${j}"><span class="tk">${d?"✓":ico[tk[0]]||"•"}</span><span>${esc(tk[2])}</span></button></li>`}).join("")}</ul></div>`;
+  return `<section class="poster lpath" id="poster">${posterTitle(LPATH.title)}<p class="psub">${esc(LPATH.sub)}</p>
+   <div class="lsum"><div class="meter big"><i style="width:${overall}%"></i></div><span><b>${overall}%</b> of the whole journey · ${pcts.filter(p=>p===100).length} of ${pcts.length} stages complete${here>=0?` · next: <b>${esc(LPATH.stages[here].h)}</b>`:""}</span></div>
+   <div class="lgrid">${LPATH.stages.map(card).join("")}
+    <div class="lnode goal" data-node="goal" style="grid-area:goal;--dc:var(--k11)"><div class="ehead"><span class="enum">★</span><div><b>AI leader</b><small>the destination</small></div></div>
+     <p>Explain AI to anyone, build and ship it safely, find where it creates value, and lead the change.</p>
+     <button class="btn sm pri" data-go3="paths">See all guided paths</button></div></div>
+   <svg class="plinks" aria-hidden="true"></svg>
+   <p class="plegend">Path order: 1 → 5 along the top, then 6 → 9 back along the bottom. <span class="lgd"><i class="known"></i>known <i class="learning"></i>learning <i class="new"></i>not started</span></p></section>`}
+const PATH_EDGES=[["s1","s2"],["s2","s3"],["s3","s4"],["s4","s5"],["s5","s6"],["s6","s7"],["s7","s8"],["s8","s9"],["s9","goal"]];
+function drawLinks(){
+  const P=$("#poster"),svg=P&&$(".plinks",P);if(!P||!svg)return;
+  const pr=P.getBoundingClientRect();svg.setAttribute("viewBox",`0 0 ${pr.width} ${pr.height}`);svg.setAttribute("width",pr.width);svg.setAttribute("height",pr.height);
+  const R=id=>{const e=$(`[data-node="${id}"]`,P);if(!e)return null;const r=e.getBoundingClientRect();return{l:r.left-pr.left,r:r.right-pr.left,t:r.top-pr.top,b:r.bottom-pr.top,cx:(r.left+r.right)/2-pr.left,cy:(r.top+r.bottom)/2-pr.top,el:e}};
+  const edges=P.classList.contains("eco")?ECO.edges:PATH_EDGES;let out="";
+  edges.forEach(([a,b],i)=>{const A=R(a),B=R(b);if(!A||!B)return;let d,x1,y1,x2,y2;
+    if(B.l>=A.r-4){x1=A.r;y1=A.cy;x2=B.l;y2=B.cy;const m=(x1+x2)/2;d=`M${x1},${y1} C${m},${y1} ${m},${y2} ${x2},${y2}`}
+    else if(B.r<=A.l+4){x1=A.l;y1=A.cy;x2=B.r;y2=B.cy;const m=(x1+x2)/2;d=`M${x1},${y1} C${m},${y1} ${m},${y2} ${x2},${y2}`}
+    else if(B.t>=A.b-4){x1=Math.max(A.l+20,Math.min(A.r-20,B.cx));y1=A.b;x2=B.cx;y2=B.t;const m=(y1+y2)/2;d=`M${x1},${y1} C${x1},${m} ${x2},${m} ${x2},${y2}`}
+    else {x1=Math.max(A.l+20,Math.min(A.r-20,B.cx));y1=A.t;x2=B.cx;y2=B.b;const m=(y1+y2)/2;d=`M${x1},${y1} C${x1},${m} ${x2},${m} ${x2},${y2}`}
+    const col=getComputedStyle(A.el).getPropertyValue("--dc").trim()||"var(--a1)";
+    out+=`<path d="${d}" class="plink" style="stroke:${col};animation-delay:${-i*0.35}s"/><circle cx="${x1}" cy="${y1}" r="3.5" style="fill:${col}"/><circle cx="${x2}" cy="${y2}" r="3.5" style="fill:${col}"/>`});
+  svg.innerHTML=out;
+}
+let tipFor=null;
+function showTip(el,id,pinned){const t=BY[id];if(!t)return;const tip=$("#ptip"),st=termState(id),D=DOM[t.d];tipFor=id;
+  tip.innerHTML=`<div class="pt-h"><b>${esc(t.t)}</b><span class="chip tc" style="pointer-events:none;--dc:${dcv(t.d)}">${D.ico} ${esc(D.n)}</span></div>
+    <p>${esc(t.s)}</p>${t.a?`<p class="pt-a">${esc(t.a)}</p>`:""}
+    <div class="pt-f"><span class="pt-st ${st}">${st==="known"?"✓ You know this":st==="learning"?"◐ Learning":"○ Not started"}</span>${pinned?`<button class="btn sm pri" id="ptOpen">Open details</button>`:`<span class="muted">Click for full details</span>`}</div>`;
+  tip.hidden=false;tip.style.setProperty("--dc",dcv(t.d));
+  const r=el.getBoundingClientRect(),w=Math.min(320,window.innerWidth-24);tip.style.width=w+"px";
+  const th=tip.offsetHeight;let left=Math.max(12,Math.min(window.innerWidth-w-12,r.left+r.width/2-w/2));
+  let top=r.top-th-10;if(top<70)top=r.bottom+10;tip.style.left=left+"px";tip.style.top=top+"px";
+  if(pinned&&$("#ptOpen"))$("#ptOpen").onclick=()=>{hideTip();openTerm(id)};}
+function hideTip(){const tip=$("#ptip");if(tip)tip.hidden=true;tipFor=null}
+function wirePoster(root){
+  const touch=matchMedia("(hover:none)").matches;
+  $$(".pchip",root).forEach(c=>{const id=c.dataset.pt;
+    if(!touch){c.onmouseenter=()=>showTip(c,id,false);c.onmouseleave=hideTip}
+    if(!touch){c.onfocus=()=>showTip(c,id,false);c.onblur=hideTip}   // keyboard users get the tip on focus
+    c.onclick=e=>{if(touch&&tipFor!==id){e.preventDefault();showTip(c,id,true);return}hideTip();openTerm(id)}});
+  $$(".eflow",root).forEach(b=>b.onclick=()=>{FI=FLOWS.findIndex(f=>f.id===b.dataset.flow);FS=0;focusT=null;go("flows")});
+  $$("[data-go3]",root).forEach(b=>b.onclick=()=>go(b.dataset.go3));
+  $$("[data-tk]",root).forEach(b=>b.onclick=()=>{const [si,ti]=b.dataset.tk.split(":").map(Number),st=LPATH.stages[si],[k,id]=st.do[ti];
+    if(k==="guide"){LG=id;go("lab")}else if(k==="lead"){LL=id;go("lead")}
+    else if(k==="flow"){FI=FLOWS.findIndex(f=>f.id===id);FS=0;focusT=null;go("flows")}
+    else if(k==="path"){PV=id;go("paths")}else if(k==="view")go(id)
+    else if(k==="quiz"){qPool={label:"Learning path — "+st.h,ids:st.t};qMode="def";qTag="bp:"+id;QZ=null;go("quiz");startQuiz()}});
+}
+let linkT=null;
+window.addEventListener("resize",()=>{if(cur!=="big")return;clearTimeout(linkT);linkT=setTimeout(drawLinks,120)});
+document.addEventListener("scroll",()=>{if(!tipFor)return;const a=document.activeElement;
+  if(a&&a.classList&&a.classList.contains("pchip")&&a.dataset.pt===tipFor)showTip(a,tipFor,matchMedia("(hover:none)").matches);   // follow the focused term
+  else if(!matchMedia("(hover:none)").matches)hideTip()},{passive:true});
+document.addEventListener("click",e=>{if(tipFor&&!e.target.closest(".pchip,#ptip"))hideTip()});
 
 /* ════════════ DRILL-DOWN DRAWER ════════════ */
 let hist=[];
